@@ -12,13 +12,14 @@ const NewBookForm = () => {
     setAuthor("");
   };
   return (
-    <form onSubmit={hanldeSubmit}>
+    <form className="NewBookForm__form" onSubmit={hanldeSubmit}>
       <input
         type="text"
         placeholder="book title"
         value={title}
         required
         onChange={(e) => setTitle(e.target.value)}
+        className="NewBookForm__book-title"
       />
       <input
         type="text"
@@ -26,8 +27,9 @@ const NewBookForm = () => {
         value={author}
         required
         onChange={(e) => setAuthor(e.target.value)}
+        className="NewBookForm__book-author"
       />
-      <input type="submit" value={"Add Book"} />
+      <input type="submit" value={"Add Book"} className="NewBookForm__submit" />
     </form>
   );
 };
